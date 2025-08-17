@@ -6,12 +6,13 @@ const Page = async () => {
     name: string;
   }
 
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const res = await fetch("https://jsonplaceholder.typicode.com/users", {cache: "no-store"});
   const users: User[] = await res.json();
 
   return (
     <div>
       <h1>User List</h1>
+      <p>{new Date().toLocaleTimeString()}</p>
       <ul>
         {users.map((user) => (
           <li key={user.id}>
