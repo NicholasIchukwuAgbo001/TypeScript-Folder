@@ -31,4 +31,8 @@ const User: UserInterface = {
     occupation: "Developer",
 }
 
-console.log(User.age)
+if(!User.age){
+    console.log("Age is not defined");
+}else{
+    console.log(User.age)
+}
