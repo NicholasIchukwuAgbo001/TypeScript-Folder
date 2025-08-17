@@ -19,7 +19,7 @@ const concatenateValue = (a: number, b: number) => {
 console.log(concatenateValue(5, 10))
 
 
-interface UserInterface{
+interface UserInterface {
     name: string;
     age?: number;
     occupation: string
