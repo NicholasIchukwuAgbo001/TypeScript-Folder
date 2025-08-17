@@ -17,3 +17,18 @@ const concatenateValue = (a: number, b: number) => {
 }
 
 console.log(concatenateValue(5, 10))
+
+
+interface UserInterface{
+    name: string;
+    age?: number;
+    occupation: string
+}
+
+const User: UserInterface = {
+    name: "Niko",
+    age: 25,
+    occupation: "Developer",
+}
+
+console.log(User.age)
