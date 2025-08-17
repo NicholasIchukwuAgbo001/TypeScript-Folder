@@ -36,3 +36,12 @@ if(!User.age){
 }else{
     console.log(User.age)
 }
+
+type IDFieldType = string | number;
+
+const printID = (id: IDFieldType) => {
+    console.log("ID: ",id);
+}
+
+printID("1234")
+printID(2)
