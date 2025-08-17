@@ -45,3 +45,16 @@ const printID = (id: IDFieldType) => {
 
 printID("1234")
 printID(2)
+
+interface BusinessPartner {
+    name: string;
+    address: string;
+}
+
+interface UserIdentity {
+    id: number;
+    email: string;
+}
+
+type Employer = BusinessPartner & UserIdentity;
+
