@@ -71,9 +71,9 @@ const signContract = (employee: Employee): void => {
 
 const employee: Employee = {
     name: "Nicholas",
-    address: "123 Main St",
+    address: "12 Main St",
     id: 101,
-    email: "nicholas@example.com",
+    email: "nicholas@gmail.com",
 };
 
 signContract(employee);
