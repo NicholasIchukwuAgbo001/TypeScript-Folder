@@ -1,22 +1,42 @@
 class StorageContainer<T> {
-    private contents: T[]
+    private contents: T[];
 
     constructor() {
         this.contents = [];
     }
 
-    addItems(item: T): void {
+    addItem(item: T): void {
         this.contents.push(item);
     }
 
-    getItems(index: number): T | undefined {
-        return this.contents[index]
+    getItem(index: number): T | undefined {
+        return this.contents[index];
+    }
+
+    getAll(): T[] {
+        return [...this.contents]; 
     }
 }
 
 const usernames = new StorageContainer<string>();
+usernames.addItem("Nicholas");
+usernames.addItem("Ichukwu");
+console.log("First username:", usernames.getItem(0));
+console.log("All usernames:", usernames.getAll());
 
-usernames.addItems("Niko");
-usernames.addItems("Agbo");
+const numbers = new StorageContainer<number>();
+numbers.addItem(10);
+numbers.addItem(20);
+console.log("First number:", numbers.getItem(0));
+console.log("All numbers:", numbers.getAll());
 
-console.log(usernames.getItems(0));
+interface Product {
+    id: number;
+    name: string;
+}
+
+const products = new StorageContainer<Product>();
+products.addItem({ id: 1, name: "Laptop" });
+products.addItem({ id: 2, name: "Phone" });
+console.log("First product:", products.getItem(0));
+console.log("All products:", products.getAll());
